@@ -9,9 +9,12 @@
 			@click:row="selectRow"
 			:multi-sort="true"
 		></v-data-table>
+
+        <ProductTabs/>
         <!-- Two Imported Components, Different declaration -->
         <ProductReview/>
         <toggle-class></toggle-class>
+
         <!-- Snackbar -->
 		<v-snackbar v-model="snackbar">
 			You have selected {{ selectedEmployee.name }},
@@ -27,12 +30,14 @@
 import employeesData from '../data/employeesData.json'
 import ProductReview from '@/components/ProductReview.vue'
 import ToggleClass from '@/components/ToggleClass.vue'
+import ProductTabs from '@/components/ProductTabs.vue'
 
 export default {
 	name: 'DashboardPage',
     components: {
         ProductReview,
-        ToggleClass
+        ToggleClass,
+        ProductTabs
     },
 	data() {
 		return {
